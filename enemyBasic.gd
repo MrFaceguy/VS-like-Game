@@ -15,7 +15,8 @@ extends CharacterBody2D
 func _physics_process(delta):
 	if attributes.health > 0:
 		target_finding(enemy_Target)
-		velocity = attributes.movement_sequencing(moveX * attributes.speed, moveY, self.velocity, delta)
+		velocity = attributes.movement_sequencing(moveX * attributes.speed,
+		moveY * attributes.speed, self.velocity, delta)
 		move_and_slide()
 	else:
 		attributes.death_sequencing(null, "null", self)
@@ -24,6 +25,7 @@ func _physics_process(delta):
 func target_finding(enemy):
 	if enemy != null:
 		moveX = sign(enemy.position.x - self.position.x)
+		moveY = sign(enemy.position.y - self.position.y)
 
 func _on_ai_area_vision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player_Character"):
