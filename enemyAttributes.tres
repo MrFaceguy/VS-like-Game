@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="creatureAttributes" load_steps=2 format=3 uid="uid://dk6ve7dn60x6e"]
+
+[ext_resource type="Script" uid="uid://c6qky84r3hfvd" path="res://creature.gd" id="1_1pdpk"]
+
+[resource]
+script = ExtResource("1_1pdpk")
+creature_name = "Werewolf"
+health = 0.0
+speed = 250.0
+weaponArray = []
+drops = []
+gravity = 200.0
+metadata/_custom_type_script = "uid://c6qky84r3hfvd"

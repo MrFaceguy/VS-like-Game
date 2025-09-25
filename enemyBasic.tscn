@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1k668f7mke45"]
+
+[ext_resource type="Script" uid="uid://b0tb8dklhs8o7" path="res://enemyBasic.gd" id="1_p5xsc"]
+[ext_resource type="Texture2D" uid="uid://c2jiiqrqwipgv" path="res://icon.svg" id="2_tjkbp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dtfm5"]
+radius = 64.0
+height = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dnhwc"]
+radius = 345.023
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_p5xsc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tjkbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dtfm5")
+
+[node name="AI Area Vision" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AI Area Vision"]
+shape = SubResource("CircleShape2D_dnhwc")
+debug_color = Color(1, 0, 0.0980392, 0.0823529)
+
+[connection signal="body_entered" from="AI Area Vision" to="." method="_on_ai_area_vision_body_entered"]

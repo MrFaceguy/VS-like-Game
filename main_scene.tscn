@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdwlwqiun5lln"]
+
+[ext_resource type="PackedScene" uid="uid://b8v3pt3w2w50v" path="res://player.tscn" id="1_0f027"]
+[ext_resource type="Texture2D" uid="uid://c2jiiqrqwipgv" path="res://icon.svg" id="2_2c62f"]
+[ext_resource type="PackedScene" uid="uid://d1k668f7mke45" path="res://enemyBasic.tscn" id="3_gyfs4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyfs4"]
+size = Vector2(1184, 219)
+
+[node name="Node" type="Node"]
+
+[node name="player" parent="." groups=["Player_Character"] instance=ExtResource("1_0f027")]
+position = Vector2(159, -11)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(84, 529)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(509, 48.5)
+shape = SubResource("RectangleShape2D_gyfs4")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(515.5, 40.5)
+scale = Vector2(9.05469, 1.63281)
+texture = ExtResource("2_2c62f")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_gyfs4")]
+position = Vector2(887, 153)
