@@ -7,8 +7,6 @@ class_name creatureAttributes
 @export var weaponArray : Array
 @export var drops : Array
 
-@export var gravity : float
-
 
 
 func movement_sequencing(moveX, moveY, velocity, delta):
@@ -17,10 +15,6 @@ func movement_sequencing(moveX, moveY, velocity, delta):
 	return velocity
 
 
-func death_sequencing(animator, death_animation, creature):
-	animator.play(death_animation)
-	# instantiate drops
-	creature.queue_free()
 
 func animation_sequencing(character_state):
 	pass

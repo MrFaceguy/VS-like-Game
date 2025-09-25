@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdwlwqiun5lln"]
+
+[ext_resource type="PackedScene" uid="uid://b8v3pt3w2w50v" path="res://Scenes/player.tscn" id="1_0f027"]
+[ext_resource type="PackedScene" uid="uid://d1k668f7mke45" path="res://Scenes/enemyBasic.tscn" id="3_gyfs4"]
+
+[node name="Node" type="Node"]
+
+[node name="player" parent="." groups=["Player_Character"] instance=ExtResource("1_0f027")]
+position = Vector2(159, -11)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_gyfs4")]
+position = Vector2(887, 153)

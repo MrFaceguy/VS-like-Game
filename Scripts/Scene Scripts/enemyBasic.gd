@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var enemy_Target : Node2D
 
 
-@export var attributes = preload("res://player_Attributes.tres")
+@export var attributes = preload("res://Resources/enemyAttributes.tres")
 
 
 func _physics_process(delta):

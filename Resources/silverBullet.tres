@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Projectile_Attributes" load_steps=3 format=3 uid="uid://dpf5vj3ix2qm7"]
+
+[ext_resource type="Script" uid="uid://c2d8g7kc7sbif" path="res://Scripts/Resource Scripts/Projectile_Attributes.gd" id="1_l8dfi"]
+[ext_resource type="Texture2D" uid="uid://c2jiiqrqwipgv" path="res://icon.svg" id="2_21wxj"]
+
+[resource]
+script = ExtResource("1_l8dfi")
+sprite = ExtResource("2_21wxj")
+velocity = Vector2(0, 5)
+metadata/_custom_type_script = "uid://c2d8g7kc7sbif"

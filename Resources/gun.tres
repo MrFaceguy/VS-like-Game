@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Weapon_Attributes" load_steps=3 format=3 uid="uid://vfr2707t3xrh"]
+
+[ext_resource type="Resource" uid="uid://dpf5vj3ix2qm7" path="res://Resources/silverBullet.tres" id="1_u0yvb"]
+[ext_resource type="Script" uid="uid://bajfj7nuawxd5" path="res://Scripts/Resource Scripts/weapon_Template.gd" id="2_kewrw"]
+
+[resource]
+script = ExtResource("2_kewrw")
+projectile_type = ExtResource("1_u0yvb")
+shots_per_second = 1
+metadata/_custom_type_script = "uid://bajfj7nuawxd5"

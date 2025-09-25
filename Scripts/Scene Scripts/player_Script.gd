@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var left_or_right : float
 @onready var up_or_down : float
-@export var attributes = preload("res://player_Attributes.tres")
+@export var attributes = preload("res://Resources/player_Attributes.tres")
 
 func _physics_process(delta):
 	if attributes.health > 0:
@@ -14,3 +14,5 @@ func _physics_process(delta):
 	else:
 		attributes.death_sequencing(null, "null", self)
 	attributes.animation_sequencing(null)
+	for child in attributes.weaponArray:
+		child.emit_projectile(self, "res://Scenes/projectile_Scene.tscn")

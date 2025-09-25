@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8v3pt3w2w50v"]
 
 [ext_resource type="Texture2D" uid="uid://c2jiiqrqwipgv" path="res://icon.svg" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://bk7xqhsq3y5yu" path="res://player_Script.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://bk7xqhsq3y5yu" path="res://Scripts/Scene Scripts/player_Script.gd" id="1_onrkg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nugsn"]
 
